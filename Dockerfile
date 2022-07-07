@@ -17,7 +17,7 @@ ENV COMPOSER_ALLOW_SUPERUSER 1
 COPY ./src /var/www/html
 COPY ./docker/app/php.ini /usr/local/etc/php/php.ini
 
-# Heroku で Apache2 が設定エラーになることへの対応
+# Heroku で Apache2 が設定エラーになる
 # https://github.com/docker-library/wordpress/issues/293
 COPY ./docker/app/run-apache2.sh /usr/local/bin/
 CMD [ "run-apache2.sh" ]
